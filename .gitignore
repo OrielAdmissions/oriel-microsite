@@ -92,3 +92,6 @@ cache/acorn/
 /wp-trackback.php
 /xmlrpc.php
 wp-content/themes/oriel-roots-sage/vendor/
+
+/wp-content/themes/oriel-roots-sage/public/*
+!/wp-content/themes/oriel-roots-sage/public/.gitkeep
