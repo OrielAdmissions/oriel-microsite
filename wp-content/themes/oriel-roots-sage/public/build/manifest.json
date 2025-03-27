@@ -1,0 +1,83 @@
+{
+  "_editor.deps.json": {
+    "file": "editor.deps.json",
+    "src": "_editor.deps.json"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-BkGrW8bU.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/editor.css": {
+    "file": "assets/editor-CMo2n-4o.css",
+    "src": "resources/css/editor.css",
+    "isEntry": true
+  },
+  "resources/fonts/PPHatton-Bold.otf": {
+    "file": "assets/PPHatton-Bold-DA15kLTu.otf",
+    "src": "resources/fonts/PPHatton-Bold.otf"
+  },
+  "resources/fonts/PPHatton-BoldItalic.otf": {
+    "file": "assets/PPHatton-BoldItalic-DsiDrKlA.otf",
+    "src": "resources/fonts/PPHatton-BoldItalic.otf"
+  },
+  "resources/fonts/PPHatton-Medium.otf": {
+    "file": "assets/PPHatton-Medium-D-UA1v87.otf",
+    "src": "resources/fonts/PPHatton-Medium.otf"
+  },
+  "resources/fonts/PPHatton-MediumItalic.otf": {
+    "file": "assets/PPHatton-MediumItalic-C4LfZkUe.otf",
+    "src": "resources/fonts/PPHatton-MediumItalic.otf"
+  },
+  "resources/fonts/PPHatton-Ultralight.otf": {
+    "file": "assets/PPHatton-Ultralight-BWBFjDph.otf",
+    "src": "resources/fonts/PPHatton-Ultralight.otf"
+  },
+  "resources/fonts/PPHatton-UltralightItalic.otf": {
+    "file": "assets/PPHatton-UltralightItalic-CkJ3Rhxi.otf",
+    "src": "resources/fonts/PPHatton-UltralightItalic.otf"
+  },
+  "resources/fonts/PPRightGrotesk-Light.otf": {
+    "file": "assets/PPRightGrotesk-Light-cUa0fl7u.otf",
+    "src": "resources/fonts/PPRightGrotesk-Light.otf"
+  },
+  "resources/images/chevron-right.svg": {
+    "file": "assets/chevron-right-BWlaMm5U.svg",
+    "src": "resources/images/chevron-right.svg"
+  },
+  "resources/images/micro-shape.svg": {
+    "file": "assets/micro-shape-C-TEb_lD.svg",
+    "src": "resources/images/micro-shape.svg"
+  },
+  "resources/images/oriel-microsite-logo-large.svg": {
+    "file": "assets/oriel-microsite-logo-large-BrGtd82e.svg",
+    "src": "resources/images/oriel-microsite-logo-large.svg"
+  },
+  "resources/images/oriel-microsite-logo.svg": {
+    "file": "assets/oriel-microsite-logo-C3SP9y_X.svg",
+    "src": "resources/images/oriel-microsite-logo.svg"
+  },
+  "resources/images/rona.png": {
+    "file": "assets/rona-BKXxO66V.png",
+    "src": "resources/images/rona.png"
+  },
+  "resources/images/slider-image-1.png": {
+    "file": "assets/slider-image-1-CkuY5KPq.png",
+    "src": "resources/images/slider-image-1.png"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-CmkkFEQc.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/app-D_ShJ4pO.css"
+    ]
+  },
+  "resources/js/editor.js": {
+    "file": "assets/editor-CfU4GbSP.js",
+    "name": "editor",
+    "src": "resources/js/editor.js",
+    "isEntry": true
+  }
+}

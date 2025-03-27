@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'PP Hatton';
+  font-style: normal;
+  font-weight: 700; /* Bold */
+  font-display: swap;
+  src: url('@fonts/PPHatton-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'PP Hatton';
+  font-style: italic;
+  font-weight: 700; /* Bold Italic */
+  font-display: swap;
+  src: url('@fonts/PPHatton-BoldItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'PP Hatton';
+  font-style: normal;
+  font-weight: 500; /* Medium */
+  font-display: swap;
+  src: url('@fonts/PPHatton-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'PP Hatton';
+  font-style: italic;
+  font-weight: 500; /* Medium Italic */
+  font-display: swap;
+  src: url('@fonts/PPHatton-MediumItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'PP Hatton';
+  font-style: normal;
+  font-weight: 300; /* Ultralight */
+  font-display: swap;
+  src: url('@fonts/PPHatton-Ultralight.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'PP Hatton';
+  font-style: italic;
+  font-weight: 300; /* Ultralight Italic */
+  font-display: swap;
+  src: url('@fonts/PPHatton-UltralightItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'PP Right Grotesk';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('@fonts/PPRightGrotesk-Light.otf') format('opentype');
+}
