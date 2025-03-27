@@ -32,14 +32,12 @@
     "@alpinejs/focus": "^3.14.8",
     "@alpinejs/ui": "^3.14.8",
     "@fancyapps/ui": "^5.0.36",
-    "@popperjs/core": "^2.11.8",
     "@wordpress/block-editor": "^14.13.0",
     "@wordpress/blocks": "^14.7.0",
     "@wordpress/components": "^29.4.0",
     "@wordpress/scripts": "^30.11.0",
     "alpinejs": "^3.14.8",
     "gsap": "npm:@gsap/shockingly@^3.12.7",
-    "swiper": "^11.2.2",
-    "tippy.js": "^6.3.7"
+    "swiper": "^11.2.2"
   }
 }
