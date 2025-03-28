@@ -46,9 +46,9 @@
             <div class="flex gap-4">
               <x-button-round
                       :direction="'left'"
-                      classes="swiper-3-btn-prev"
+                      classes="swiper-3-btn-prev text-white"
               ></x-button-round>
-              <x-button-round classes="swiper-3-btn-next"></x-button-round>
+              <x-button-round classes="swiper-3-btn-next text-white"></x-button-round>
             </div>
             <div class="relative inline-block w-[112px]">
               <div
