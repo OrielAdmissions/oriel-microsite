@@ -29,7 +29,7 @@
         <div class="breakout mx-auto">
             <div class="grid grid-cols-12 gap-x-4 gap-y-6">
                 <div class="col-span-full lg:col-span-7">
-                    <div class="">
+                    <div>
                         <?php
                         echo App\get_picture([22], 'full', false, [
                             'class' => 'object-cover object-right w-full rounded-xl',

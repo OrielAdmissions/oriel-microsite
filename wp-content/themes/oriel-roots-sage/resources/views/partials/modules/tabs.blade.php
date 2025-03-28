@@ -27,11 +27,11 @@
 <div x-data="{ selectedTab: {{ $defaultActive }} }" x-tabs :selected="selectedTab"
      class="full-width content-grid bg-[#F5F5F2]">
     <!-- Tab List -->
-    <div x-tabs:list class="divide-keyline/80 breakout bg-white full-width flex items-stretch divide-x">
+    <div x-tabs:list class="breakout bg-white full-width flex items-stretch">
         @foreach ($tabs as $tab)
             <button x-tabs:tab type="button"
-                    :class="$tab.isSelected ? 'border-b-[var(--tab-accent)]' : 'border-b-keyline/80'"
-                    class="bg-sand/20 inline-flex w-full cursor-pointer font-serif justify-center border-b-2 p-7 text-center text-2xl transition duration-300 focus:outline-none"
+                    :class="$tab.isSelected ? 'border-b-[var(--tab-accent)]' : 'border-b-transparent'"
+                    class="bg-white inline-flex w-full cursor-pointer font-serif justify-center border-b-2 p-7 text-center text-2xl transition duration-300 focus:outline-none"
                     style="--tab-accent: {{ $tab['accent_color'] }}">
                 {{ $tab['label'] }}
             </button>
