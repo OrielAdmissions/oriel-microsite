@@ -52,7 +52,7 @@
     <div>
       @if ($button_link)
         <a href="{{ $button_link }}" class="stretched-link max-sm:hidden">
-          <span class="btn btn-primary">Read More</span>
+          <span class="btn btn-outline">Read More</span>
         </a>
 
         <a href="{{ $button_link }}" class="stretched-link sm:hidden">
