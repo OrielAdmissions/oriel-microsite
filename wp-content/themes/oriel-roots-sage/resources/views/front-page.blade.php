@@ -143,7 +143,7 @@
         <h2 class="text-center text-6xl-fluid mb-12">
             Case Studies </h2>
         <div class="breakout grid grid-cols-12 gap-4">
-            <div class="lg:col-span-4">
+            <div class="col-span-full lg:col-span-4">
                 <article data-tags="" class="group relative flex h-full flex-col items-start justify-between overflow-hidden rounded-xl bg-white transition duration-500">
                     <div class="bg-sand relative aspect-16/9 w-full overflow-hidden rounded-t-lg">
                         <picture><img width="534" height="430" src="/wp-content/uploads/2025/03/Blog-Post-Image.png" class="w-full h-full object-cover aspect-16/9" alt="" ></picture>
@@ -172,7 +172,7 @@
                     </div>
                 </article>
             </div>
-            <div class="lg:col-span-4">
+            <div class="col-span-full lg:col-span-4">
                 <article data-tags="" class="group relative flex h-full flex-col items-start justify-between overflow-hidden rounded-xl bg-white transition duration-500">
                     <div class="bg-sand relative aspect-16/9 w-full overflow-hidden rounded-t-lg">
                         <picture><img width="534" height="430" src="/wp-content/uploads/2025/03/Blog-Post-Image.png" class="w-full h-full object-cover aspect-16/9" alt="" ></picture>
@@ -201,7 +201,7 @@
                     </div>
                 </article>
             </div>
-            <div class="lg:col-span-4">
+            <div class="col-span-full lg:col-span-4">
                 <article data-tags="" class="group relative flex h-full flex-col items-start justify-between overflow-hidden rounded-xl bg-white transition duration-500">
                     <div class="bg-sand relative aspect-16/9 w-full overflow-hidden rounded-t-lg">
                         <picture><img width="534" height="430" src="/wp-content/uploads/2025/03/Blog-Post-Image.png" class="w-full h-full object-cover aspect-16/9" alt="" ></picture>

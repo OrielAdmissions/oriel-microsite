@@ -11,6 +11,7 @@ export function initStorySwiper() {
   const swiperElement = document.querySelector('.story-swiper');
   if (!swiperElement) return;
 
+  const textContainer = document.querySelector('.text-container');
   const storyText = document.querySelector('#storyText');
   const slides = document.querySelectorAll('.swiper-slide');
 
