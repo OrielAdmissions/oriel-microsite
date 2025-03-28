@@ -41,7 +41,7 @@
             What our customers have to say
           </h2>
           <div
-                  class="flex items-center gap-4 max-lg:flex-col max-lg:items-center"
+                  class="flex items-center gap-4 max-lg:flex-col max-lg:items-center max-lg:hidden"
           >
             <div class="flex gap-4">
               <x-button-round
@@ -59,7 +59,7 @@
           </div>
         </div>
         <div class="lg:col-span-1 lg:col-start-2 flex items-center justify-center">
-          <svg class="w-full h-auto" width="478" height="478" viewBox="0 0 478 478" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="w-full h-auto max-lg:hidden" width="478" height="478" viewBox="0 0 478 478" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g opacity="0.3">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M381.902 0.0185547H96.0786V477.981H381.902V401.207C371.52 402.335 360.99 404.138 350.44 406.652C297.511 419.269 256.863 446.77 238.994 477.943C221.125 446.77 180.476 419.269 127.547 406.652C116.995 404.137 106.464 402.335 96.0818 401.206V72.0197C107.538 70.9299 119.193 69.0188 130.872 66.2347C180.897 54.3101 219.952 29.0911 239.173 0.0409783C258.394 29.0929 297.45 54.3139 347.477 66.2391C359.032 68.9936 370.564 70.8934 381.902 71.989V0.0185547Z" fill="#E0DDD4"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M477.984 381.909V96.088L0.0184451 96.088L0.0184326 381.909H76.7711C75.6426 371.533 73.8406 361.008 71.327 350.463C58.7085 297.529 31.2036 256.877 0.025377 239.011C31.2097 221.15 58.7213 180.494 71.3418 127.551C73.8564 117.002 75.6588 106.473 76.7872 96.0925L405.966 96.0925C407.056 107.54 408.966 119.185 411.748 130.855C423.674 180.886 448.899 219.945 477.954 239.163C448.896 258.381 423.67 297.441 411.743 347.475C408.987 359.034 407.087 370.568 405.992 381.909H477.984Z" fill="#E0DDD4"/>
@@ -133,7 +133,23 @@
                 Chemistry
               </li>
             </ul>
-
+            <div
+                    class="flex items-center gap-4 max-lg:flex-col max-lg:items-center lg:hidden"
+            >
+              <div class="flex gap-4">
+                <x-button-round
+                        :direction="'left'"
+                        classes="swiper-3-btn-prev text-white"
+                ></x-button-round>
+                <x-button-round classes="swiper-3-btn-next text-white"></x-button-round>
+              </div>
+              <div class="relative inline-block w-[112px]">
+                <div
+                        class="swiper-pagination-3 text-white"
+                        style="--swiper-theme-color: #fff"
+                ></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
