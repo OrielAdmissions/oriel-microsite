@@ -47,18 +47,24 @@ $header_class =
       <div class="flex items-stretch">
         <div
           id="mainMenu"
-          class="main-nav-menu relative flex h-12 shrink-0 grow rounded-full p-[2px] before:absolute before:inset-0 before:h-full before:w-full before:rounded-full before:bg-white/80 before:backdrop-blur-[32px]"
+          class="main-nav-menu relative flex h-12 shrink-0 grow rounded-full p-[2px]"
           aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}"
         >
           <x-navigation></x-navigation>
         </div>
         <div
-          class="grid-cols-1fr grid flex-1 grid-cols-[0fr] grid-cols-[1fr] transition-all"
+          class="grid flex-1 grid-cols-[0fr] transition-all  max-xl:hidden"
         >
-          <div class="pl-4">
+          <div class="pl-4 flex gap-3 items-center">
+            <a
+                    href="/blog"
+                    class="btn btn-khaki whitespace-nowrap"
+            >
+              Blog
+            </a>
             <a
               href="/contact"
-              class="btn {{is_page('high-school-research-program')?'btn-white':'btn-primary'}} whitespace-nowrap max-xl:hidden"
+              class="btn btn-khaki whitespace-nowrap"
             >
               Contact Us
             </a>

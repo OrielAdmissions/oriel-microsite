@@ -41,30 +41,55 @@
     <!-- Tab Panels -->
     <div x-tabs:panels class="tab-contents breakout">
         <section x-tabs:panel class="tab-content">
-            <div class="relative py-24 md:py-40">
+            <div class="relative py-12 md:py-30">
                 <div class="relative z-10 mx-auto px-4">
-                    <div class="-mx-4 flex flex-wrap items-center">
-
+                    <div class="flex flex-wrap gap-y-12">
                         <div class="w-full px-4 md:w-1/2">
                             <div class="md:pr-16 lg:pr-24">
                                 {!!
   App\get_picture([19], 'full', false, [
-    'class' => 'rounded-xl w-full mb-8 ',
+    'class' => 'rounded-xl w-full mb-8',
   ])
 !!}
                                 <p>
                                     Uncover valuable insights through our innovative surveys. Participants can share
-                                    detailed written responses or video recordings about a wide range of topics to better
-                                    understand your institution’s culture. </p>
+                                    detailed written responses or video recordings about a wide range of topics to
+                                    better understand your institution’s culture. </p>
                             </div>
 
                         </div>
-                        <div class="mb-16 w-full px-4 md:mb-0 md:w-1/2">
-                            <ol role="list" class="divide-y divide-gray-100">
-                                <li class="flex justify-between gap-x-6 py-5">
-
-                                </li>
-                            </ol>
+                        <div class="w-full px-4 md:mb-0 md:w-1/2">
+                            <div class="w-full lg:pb-10">
+                                <div class="">
+                                    <div class="flex pb-12 mb-12 border-b border-b-slate">
+                                        <div class="flex flex-shrink-0 w-15 h-15 mr-6 items-center justify-center">
+                                            {!! get_svg("images.icon-number-1", 'size-full text-oriel') !!}
+                                        </div>
+                                        <div>
+                                            <h3 class="font-sans">Planning Phase</h3>
+                                            <span class="">We will partner with key stakeholders in your organization to define areas of focus. We create a survey brief based on our findings. </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex pb-12 mb-12 border-b border-b-slate">
+                                        <div class="flex flex-shrink-0 w-15 h-15 mr-6 items-center justify-center">
+                                            {!! get_svg("images.icon-number-2", 'size-full text-oriel') !!}
+                                        </div>
+                                        <div>
+                                            <h3 class="font-sans">Planning Phase</h3>
+                                            <span class="">We will partner with key stakeholders in your organization to define areas of focus. We create a survey brief based on our findings. </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex pb-12 border-b border-b-slate">
+                                        <div class="flex flex-shrink-0 w-15 h-15 mr-6 items-center justify-center">
+                                            {!! get_svg("images.icon-number-3", 'size-full text-oriel') !!}
+                                        </div>
+                                        <div>
+                                            <h3 class="font-sans">Planning Phase</h3>
+                                            <span class="">We will partner with key stakeholders in your organization to define areas of focus. We create a survey brief based on our findings. </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
@@ -73,29 +98,56 @@
         </section>
 
         <section x-tabs:panel class="tab-content">
-            <div class="relative py-24 md:py-40">
+            <div class="relative py-12 md:py-30">
                 <div class="relative z-10 mx-auto px-4">
-                    <div class="-mx-4 flex flex-wrap items-center">
+                    <div class="flex flex-wrap gap-y-12">
                         <div class="w-full px-4 md:w-1/2">
                             <div class="md:pr-16 lg:pr-24">
                                 {!!
   App\get_picture([19], 'full', false, [
-    'class' => 'rounded-xl w-full mb-8 ',
+    'class' => 'rounded-xl w-full mb-8',
   ])
 !!}
                                 <p>
                                     Uncover valuable insights through our innovative surveys. Participants can share
-                                    detailed written responses or video recordings about a wide range of topics to better
-                                    understand your institution’s culture. </p>
+                                    detailed written responses or video recordings about a wide range of topics to
+                                    better understand your institution’s culture. </p>
                             </div>
 
                         </div>
-                        <div class="mb-16 w-full px-4 md:mb-0 md:w-1/2">
-                            <ul role="list" class="divide-y divide-gray-100">
-                                <li class="flex justify-between gap-x-6 py-5">
+                        <div class="w-full px-4 md:mb-0 md:w-1/2">
+                            <div class="w-full lg:pb-10">
+                                <div class="">
+                                    <div class="flex pb-12 mb-12 border-b border-b-slate">
+                                        <div class="flex flex-shrink-0 w-15 h-15 mr-6 items-center justify-center">
+                                            {!! get_svg("images.icon-number-1", 'size-full text-oriel') !!}
+                                        </div>
+                                        <div>
+                                            <h3 class="font-sans">Planning Phase</h3>
+                                            <span class="">We will partner with key stakeholders in your organization to define areas of focus. We create a survey brief based on our findings. </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex pb-12 mb-12 border-b border-b-slate">
+                                        <div class="flex flex-shrink-0 w-15 h-15 mr-6 items-center justify-center">
+                                            {!! get_svg("images.icon-number-2", 'size-full text-oriel') !!}
+                                        </div>
+                                        <div>
+                                            <h3 class="font-sans">Planning Phase</h3>
+                                            <span class="">We will partner with key stakeholders in your organization to define areas of focus. We create a survey brief based on our findings. </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex pb-12 border-b border-b-slate">
+                                        <div class="flex flex-shrink-0 w-15 h-15 mr-6 items-center justify-center">
+                                            {!! get_svg("images.icon-number-3", 'size-full text-oriel') !!}
+                                        </div>
+                                        <div>
+                                            <h3 class="font-sans">Planning Phase</h3>
+                                            <span class="">We will partner with key stakeholders in your organization to define areas of focus. We create a survey brief based on our findings. </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>

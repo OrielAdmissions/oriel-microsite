@@ -24,5 +24,7 @@
         {!! do_shortcode('[forminator_form id="21"]') !!}
       </div>
     </section>
+
   </div>
+  @include('partials.modules.bio-slider')
 @endsection

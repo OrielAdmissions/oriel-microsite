@@ -64,7 +64,7 @@
     </section>
 
     <section class="bg-slate full-width-constrained py-12 md:py-30">
-        <h2 class="text-6xl-fluid  pb-12 text-center">
+        <h2 class="text-6xl-fluid pb-12 text-center">
             Why work with us? </h2>
 
         @include(

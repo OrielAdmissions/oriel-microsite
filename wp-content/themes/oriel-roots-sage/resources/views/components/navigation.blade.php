@@ -82,7 +82,6 @@
                   @endforeach
                 </ul>
                 <div class="items-between relative inline-flex basis-[40%] flex-col justify-start gap-12 max-xl:hidden">
-{{--                  {!! dynamic_sidebar('menu-widget-' . Str::slug($item->label)) !!}--}}
                   @php(dynamic_sidebar('menu-widget-' . Str::slug($item->label)))
                 </div>
               </div>

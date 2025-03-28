@@ -44,8 +44,8 @@
     @apply bg-white text-black;
   }
 
-  &.btn-ivy {
-    @apply bg-ivy text-white;
+  &.btn-khaki {
+    @apply bg-khaki text-white;
   }
 
   &:hover {

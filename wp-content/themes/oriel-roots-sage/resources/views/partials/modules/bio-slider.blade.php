@@ -36,12 +36,27 @@
       >
         <div class="lg:col-span-1 lg:col-start-1">
           <h2
-            class="fade-in-bottom text-6xl-fluid text-white max-lg:mb-12 max-lg:text-center"
+            class="text-6xl-fluid text-white max-lg:mb-12 max-lg:text-center mb-6"
           >
-            Hear from
-            <br />
-            our clients
+            What our customers have to say
           </h2>
+          <div
+                  class="flex items-center gap-4 max-lg:flex-col max-lg:items-center"
+          >
+            <div class="flex gap-4">
+              <x-button-round
+                      :direction="'left'"
+                      classes="swiper-3-btn-prev"
+              ></x-button-round>
+              <x-button-round classes="swiper-3-btn-next"></x-button-round>
+            </div>
+            <div class="relative inline-block w-[112px]">
+              <div
+                      class="swiper-pagination-3 text-white"
+                      style="--swiper-theme-color: #fff"
+              ></div>
+            </div>
+          </div>
         </div>
         <div class="lg:col-span-1 lg:col-start-2"></div>
         <div
@@ -111,23 +126,7 @@
                 Chemistry
               </li>
             </ul>
-            <div
-              class="flex items-center gap-4 max-lg:flex-col max-lg:items-center"
-            >
-              <div class="flex gap-4">
-                <x-button-round
-                  :direction="'left'"
-                  classes="swiper-3-btn-prev"
-                ></x-button-round>
-                <x-button-round classes="swiper-3-btn-next"></x-button-round>
-              </div>
-              <div class="relative inline-block w-[112px]">
-                <div
-                  class="swiper-pagination-3 text-white"
-                  style="--swiper-theme-color: #fff"
-                ></div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
