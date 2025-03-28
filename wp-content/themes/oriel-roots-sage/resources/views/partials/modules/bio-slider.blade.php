@@ -4,17 +4,16 @@
     [
       'image_id' => 27,
 
-      'story' => 'Working with Oriel Admissions was the best decision that I made for my son’s college applications! Rona and her team went above and beyond, offering comprehensive support that exceeded my expectations. Their holistic counseling approach empowered my son to achieve his dream of being admitted to an Ivy League college. I highly recommend Oriel Admissions!',
+      'story' => 'Oriel Insights has been an absolute game-changer for our high school’s decision-making process. The depth of analysis and clarity of insights from our end-of-year surveys have been incredibly valuable for providing us with a comprehensive understanding of our strengths and areas for growth. Working with Oriel Insights has given us the tools to proactively shape our future with confidence and to make the best changes to grow as an institution.',
     ],
     [
       'image_id' => 27,
 
-      'story' => 'I started with Oriel Admissions when I was in 10th grade and every stage of counseling was structured yet personalized to align with my interests and goals. I appreciated their 360 degree approach and being able to work with a team, allowing me to develop diverse skills and gain valuable experiences that strengthened my applications.  I couldn’t be happier with the support that I received!',
+      'story' => 'Oriel Insights has been an invaluable tool for our admissions office in understanding and addressing barriers to application completion. By surveying students who started but never completed their applications, we gained critical insights into the hesitations that prospective students face. The survey results helped us to streamline our application process and improve communication with prospective students. By working with Oriel Insights, we were able to strengthen our enrollment efforts and expand access to our institution.',
     ],
     [
       'image_id' => 27,
-
-      'story' => 'When we began my daughter’s application process, we had no idea how much we had to learn! Rona provided direction at every step, helping my daughter to clarify her career interests, develop activities to explore those interests, and brainstorming a really interesting personal statement that showcased her personality. I think that this high level of support was the key for her acceptance into her top choice college: Brown University.',
+      'story' => 'Working with Oriel Insights for our school’s strategic planning was an incredibly smooth and rewarding experience. From the very beginning, their team provided expert guidance, ensuring that every step of the process was clear, efficient, and tailored to our institution’s unique needs. Oriel Insights not only helped us identify key areas for growth and improvement but also equipped us with a clear roadmap for success. Their professionalism, responsiveness, and expertise made for an outstanding experience, and I highly recommend them to any school looking to take a data-informed approach to strategic planning.',
     ],
   ];
 @endphp
