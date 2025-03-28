@@ -40,6 +40,4 @@
     </footer>
   @endif
 
-  {{-- @php(comments_template()) --}}
-  <hr class="border-keyline/80 mt-12" />
 </article>
