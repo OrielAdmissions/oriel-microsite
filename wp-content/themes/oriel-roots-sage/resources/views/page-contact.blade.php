@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-  <div class="breakout mt-[150px] py-16">
+  <div class="breakout mt-[150px] py-16 max-md:text-center">
     <h1
-      class="text-6xl-fluid max-w-screen-lg mb-8 max-md:text-center"
+      class="text-8xl-fluid max-w-screen-lg mb-8"
     >
       Ready to learn more?
     </h1>
