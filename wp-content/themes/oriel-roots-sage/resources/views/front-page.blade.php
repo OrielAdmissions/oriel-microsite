@@ -27,7 +27,7 @@
                 schools.</h2>
         </div>
         <div class="breakout mx-auto">
-            <div class="grid grid-cols-12 gap-x-4 gap-y-6">
+            <div class="grid grid-cols-12 gap-x-4 gap-y-6 items-center">
                 <div class="col-span-full lg:col-span-7">
                     <div>
                         <?php

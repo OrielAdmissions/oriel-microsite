@@ -95,3 +95,4 @@ wp-content/themes/oriel-roots-sage/vendor/
 
 /wp-content/themes/oriel-roots-sage/public/*
 !/wp-content/themes/oriel-roots-sage/public/.gitkeep
+/wp-content/themes/oriel-roots-sage/.env
