@@ -203,6 +203,6 @@
         </div>
     </section>
     @endif
-    wp_reset_postdata();
+    <?php wp_reset_postdata(); ?>
 
     @endsection
