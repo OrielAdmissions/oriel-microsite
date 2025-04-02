@@ -109,6 +109,7 @@ add_action('after_setup_theme', function () {
      */
     register_nav_menus([
         'primary_navigation' => __('Primary Navigation', 'sage'),
+        'mobile_navigation' => __('Mobile Navigation', 'sage')
     ]);
 
     /**
@@ -193,6 +194,7 @@ add_action('widgets_init', function () {
 // Register Navigation Menu with Custom Walker
 register_nav_menus([
     'primary_navigation' => __('Primary Navigation', 'sage'),
+    'mobile_navigation' => __('Mobile Navigation', 'sage')
 ]);
 
 //add_filter( 'acf/settings/show_admin', function () {
@@ -279,4 +281,59 @@ if (file_exists(get_template_directory() . '/app/helpers.php')) {
     require_once get_template_directory() . '/app/helpers.php';
 }
 
+add_action('init', function () {
+    $labels = array(
+        'name' => _x('Case Studies', 'Post Type General Name', 'oriel'),
+        'singular_name' => _x('Case Study', 'Post Type Singular Name', 'oriel'),
+        'menu_name' => __('Case Studies', 'oriel'),
+        'name_admin_bar' => __('Case Study', 'oriel'),
+        'archives' => __('Case Study Archives', 'oriel'),
+        'attributes' => __('Case Study Attributes', 'oriel'),
+        'parent_item_colon' => __('Parent Case Study:', 'oriel'),
+        'all_items' => __('All Case Studies', 'oriel'),
+        'add_new_item' => __('Add New Case Study', 'oriel'),
+        'add_new' => __('Add New', 'oriel'),
+        'new_item' => __('New Case Study', 'oriel'),
+        'edit_item' => __('Edit Case Study', 'oriel'),
+        'update_item' => __('Update Case Study', 'oriel'),
+        'view_item' => __('View Case Study', 'oriel'),
+        'view_items' => __('View Case Studies', 'oriel'),
+        'search_items' => __('Search Case Study', 'oriel'),
+        'not_found' => __('Not found', 'oriel'),
+        'not_found_in_trash' => __('Not found in Trash', 'oriel'),
+        'featured_image' => __('Featured Image', 'oriel'),
+        'set_featured_image' => __('Set featured image', 'oriel'),
+        'remove_featured_image' => __('Remove featured image', 'oriel'),
+        'use_featured_image' => __('Use as featured image', 'oriel'),
+        'insert_into_item' => __('Insert into case study', 'oriel'),
+        'uploaded_to_this_item' => __('Uploaded to this case study', 'oriel'),
+        'items_list' => __('Case studies list', 'oriel'),
+        'items_list_navigation' => __('Case studies list navigation', 'oriel'),
+        'filter_items_list' => __('Filter case studies list', 'oriel'),
+    );
 
+    $args = array(
+        'label' => __('Case Study', 'oriel'),
+        'description' => __('Showcasing our case studies.', 'oriel'),
+        'labels' => $labels,
+        'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom-fields'),
+        'taxonomies' => array('category', 'post_tag'), // Add categories and tags if needed
+        'hierarchical' => false,
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'menu_position' => 5,
+        'menu_icon' => 'dashicons-portfolio', // WordPress Dashicon for aesthetics
+        'show_in_admin_bar' => true,
+        'show_in_nav_menus' => true,
+        'can_export' => true,
+        'has_archive' => true,
+        'exclude_from_search' => false,
+        'publicly_queryable' => true,
+        'capability_type' => 'post',
+        'show_in_rest' => true, // Enables Gutenberg support
+        'rewrite' => array('slug' => 'case-studies'),
+    );
+
+    register_post_type('case_study', $args);
+});

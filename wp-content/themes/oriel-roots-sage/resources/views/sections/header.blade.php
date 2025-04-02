@@ -93,9 +93,9 @@ $header_class =
   <div
     id="mobile-menu"
     class="main-nav-menu bg-chalk z-10 flex flex-col gap-y-8 shadow xl:hidden"
-    aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}"
+    aria-label="{{ wp_get_nav_menu_name('mobile_navigation') }}"
     :class="{ 'active': isMobileMenuOpen }"
   >
-    <x-mobile-navigation></x-mobile-navigation>
+    <x-mobile-navigation name="mobile_navigation"></x-mobile-navigation>
   </div>
 </header>

@@ -60,7 +60,14 @@
 
     <section class="full-width text-center text-white py-12 md:py-30 bg-khaki">
         {!! get_svg('images.micro-shape', 'mx-auto') !!}
-        <h2 class="text-8xl-fluid ">We are innovators</h2>
+        <h2 class="text-8xl-fluid ">We are <span
+                    x-data="textCycler()"
+                    x-ref="text"
+                    data-words="Innovators, Results-oriented, Your Partners in Change"
+                    class="block"
+            >
+        Innovators
+      </span></h2>
     </section>
 
     <section class="bg-slate full-width-constrained py-12 md:py-30">
@@ -139,97 +146,63 @@
         )
     </section>
 
+    <?php
+// Query your case studies (change 'case_study' to your custom post type slug)
+    $args = array(
+        'post_type'      => 'case_study',
+        'posts_per_page' => -1,
+    );
+    $query = new WP_Query( $args );?>
+    @if ( $query->have_posts() )
     <section class="full-width content-grid py-12 md:py-30 bg-[#F5F5F2]">
-        <h2 class="text-center text-6xl-fluid mb-12">
-            Case Studies </h2>
+        <h2 class="text-center text-6xl-fluid mb-12">Case Studies</h2>
         <div class="breakout grid grid-cols-12 gap-4">
+                <?php while ( $query->have_posts() ) : $query->the_post(); ?>
             <div class="col-span-full lg:col-span-4">
-                <article data-tags="" class="group relative flex h-full flex-col items-start justify-between overflow-hidden rounded-xl bg-white transition duration-500">
+                <article class="group relative flex h-full flex-col items-start justify-between overflow-hidden rounded-xl bg-white transition duration-500">
                     <div class="bg-sand relative aspect-16/9 w-full overflow-hidden rounded-t-lg">
-                        <picture><img width="534" height="430" src="/wp-content/uploads/2025/03/Blog-Post-Image.png" class="w-full h-full object-cover aspect-16/9" alt="" ></picture>
+                            <?php if ( has_post_thumbnail() ) : ?>
+                        <picture>
+                                <?php the_post_thumbnail( 'full', array(
+                                'class' => 'w-full h-full object-cover aspect-16/9',
+                                'alt'   => get_the_title()
+                            ) ); ?>
+                        </picture>
+                        <?php endif; ?>
                     </div>
 
                     <div class="flex w-full grow flex-col gap-y-6 px-6 pt-10 pb-6">
                         <div class="flex grow flex-col gap-2">
                             <div class="mb-4">
-                                <span class="pill bg-khaki text-white">Category</span>
+                            <span class="pill bg-khaki text-white">
+                                <?php
+                                    // Display the first category assigned, adjust taxonomy if necessary
+                                    $terms = get_the_terms( get_the_ID(), 'category' );
+                                    echo ( $terms && ! is_wp_error( $terms ) ) ? esc_html( $terms[0]->name ) : 'Category';
+                                    ?>
+                            </span>
                             </div>
                             <h3 class="text-3xl-fluid leading-tight mb-4">
-                                <a href="/blog">
-                                    A Case Study Title
+                                <a href="<?php the_permalink(); ?>">
+                                        <?php the_title(); ?>
                                 </a>
                             </h3>
-
                             <p class="line-clamp-3 min-h-[75px] pb-8">
-                                Lorem ipsum dolor sit amet, consectetur adipisc elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com.                            </p>
+                                    <?php echo wp_trim_words( get_the_excerpt(), 30, '...' ); ?>
+                            </p>
                         </div>
-
                         <div>
-                            <a href="/blog" class="stretched-link">
+                            <a href="<?php the_permalink(); ?>" class="stretched-link">
                                 <span class="btn btn-outline">Read More</span>
                             </a>
                         </div>
                     </div>
                 </article>
             </div>
-            <div class="col-span-full lg:col-span-4">
-                <article data-tags="" class="group relative flex h-full flex-col items-start justify-between overflow-hidden rounded-xl bg-white transition duration-500">
-                    <div class="bg-sand relative aspect-16/9 w-full overflow-hidden rounded-t-lg">
-                        <picture><img width="534" height="430" src="/wp-content/uploads/2025/03/Blog-Post-Image.png" class="w-full h-full object-cover aspect-16/9" alt="" ></picture>
-                    </div>
-
-                    <div class="flex w-full grow flex-col gap-y-6 px-6 pt-10 pb-6">
-                        <div class="flex grow flex-col gap-2">
-                            <div class="mb-4">
-                                <span class="pill bg-khaki text-white">Category</span>
-                            </div>
-                            <h3 class="text-3xl-fluid leading-tight mb-4">
-                                <a href="/blog">
-                                    A Case Study Title
-                                </a>
-                            </h3>
-
-                            <p class="line-clamp-3 min-h-[75px] pb-8">
-                                Lorem ipsum dolor sit amet, consectetur adipisc elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com.                            </p>
-                        </div>
-
-                        <div>
-                            <a href="/blog" class="stretched-link">
-                                <span class="btn btn-outline">Read More</span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="col-span-full lg:col-span-4">
-                <article data-tags="" class="group relative flex h-full flex-col items-start justify-between overflow-hidden rounded-xl bg-white transition duration-500">
-                    <div class="bg-sand relative aspect-16/9 w-full overflow-hidden rounded-t-lg">
-                        <picture><img width="534" height="430" src="/wp-content/uploads/2025/03/Blog-Post-Image.png" class="w-full h-full object-cover aspect-16/9" alt="" ></picture>
-                    </div>
-
-                    <div class="flex w-full grow flex-col gap-y-6 px-6 pt-10 pb-6">
-                        <div class="flex grow flex-col gap-2">
-                            <div class="mb-4">
-                                <span class="pill bg-khaki text-white">Category</span>
-                            </div>
-                            <h3 class="text-3xl-fluid leading-tight mb-4">
-                                <a href="/blog">
-                                    A Case Study Title
-                                </a>
-                            </h3>
-
-                            <p class="line-clamp-3 min-h-[75px] pb-8">
-                                Lorem ipsum dolor sit amet, consectetur adipisc elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com.                            </p>
-                        </div>
-
-                        <div>
-                            <a href="/blog" class="stretched-link">
-                                <span class="btn btn-outline">Read More</span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-            </div>
+            <?php endwhile; ?>
         </div>
     </section>
-@endsection
+    @endif
+    wp_reset_postdata();
+
+    @endsection
