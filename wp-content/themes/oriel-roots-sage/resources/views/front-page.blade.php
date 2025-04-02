@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@php use function App\get_picture; @endphp@extends('layouts.app')
 
 @section('content')
     @php($page_id = get_the_ID())
@@ -23,8 +23,8 @@
 
     <section class="full-width content-grid py-20 lg:pt-24 lg:pb-6">
         <div>
-            <h2 class="text-5xl-fluid mb-12 max-w-200">We are redefining how educational institutions understand and improve their
-                schools.</h2>
+            <h2 class="text-5xl-fluid mb-12 max-w-200">We are redefining how educational institutions understand and
+                improve their schools.</h2>
         </div>
         <div class="breakout mx-auto">
             <div class="grid grid-cols-12 gap-x-4 gap-y-6 items-center">
@@ -60,12 +60,9 @@
 
     <section class="full-width text-center text-white py-12 md:py-30 bg-khaki">
         {!! get_svg('images.micro-shape', 'mx-auto') !!}
-        <h2 class="text-8xl-fluid ">We are <span
-                    x-data="textCycler()"
-                    x-ref="text"
-                    data-words="Innovators, Results-oriented, Your Partners in Change"
-                    class="block"
-            >
+        <h2 class="text-8xl-fluid ">We are <span x-data="textCycler()" x-ref="text"
+                                                 data-words="Innovators, Results-oriented, Your Partners in Change"
+                                                 class="block">
         Innovators
       </span></h2>
     </section>
@@ -145,15 +142,15 @@
           ]
         )
     </section>
-
     <?php
-// Query your case studies (change 'case_study' to your custom post type slug)
     $args = array(
         'post_type'      => 'case_study',
         'posts_per_page' => -1,
     );
-    $query = new WP_Query( $args );?>
-    @if ( $query->have_posts() )
+    $query = new WP_Query( $args );
+    ?>
+
+    <?php if ( $query->have_posts() ) : ?>
     <section class="full-width content-grid py-12 md:py-30 bg-[#F5F5F2]">
         <h2 class="text-center text-6xl-fluid mb-12">Case Studies</h2>
         <div class="breakout grid grid-cols-12 gap-4">
@@ -162,33 +159,33 @@
                 <article class="group relative flex h-full flex-col items-start justify-between overflow-hidden rounded-xl bg-white transition duration-500">
                     <div class="bg-sand relative aspect-16/9 w-full overflow-hidden rounded-t-lg">
                             <?php if ( has_post_thumbnail() ) : ?>
-                        <picture>
-                                <?php the_post_thumbnail( 'full', array(
-                                'class' => 'w-full h-full object-cover aspect-16/9',
-                                'alt'   => get_the_title()
-                            ) ); ?>
-                        </picture>
+                        {!! get_picture([get_post_thumbnail_id()], 'full', false, ['class'=>'w-full h-full object-cover aspect-16/9']) !!}
                         <?php endif; ?>
                     </div>
-
                     <div class="flex w-full grow flex-col gap-y-6 px-6 pt-10 pb-6">
                         <div class="flex grow flex-col gap-2">
                             <div class="mb-4">
-                            <span class="pill bg-khaki text-white">
-                                <?php
-                                    // Display the first category assigned, adjust taxonomy if necessary
-                                    $terms = get_the_terms( get_the_ID(), 'category' );
-                                    echo ( $terms && ! is_wp_error( $terms ) ) ? esc_html( $terms[0]->name ) : 'Category';
-                                    ?>
-                            </span>
+                                    <span class="pill bg-khaki text-white">
+                                        <?php
+                                            $terms = get_the_terms( get_the_ID(), 'category' );
+                                            echo ( $terms && ! is_wp_error( $terms ) ) ? esc_html( $terms[0]->name ) : 'Category';
+                                            ?>
+                                    </span>
                             </div>
                             <h3 class="text-3xl-fluid leading-tight mb-4">
                                 <a href="<?php the_permalink(); ?>">
                                         <?php the_title(); ?>
                                 </a>
                             </h3>
+                            <?php
+                            $text = get_the_excerpt();
+                            if ( empty( $text ) ) {
+                            // Apply filters so shortcodes and formatting are processed.
+                            $text = apply_filters( 'the_content', get_the_content() );
+                            }
+                            ?>
                             <p class="line-clamp-3 min-h-[75px] pb-8">
-                                    <?php echo wp_trim_words( get_the_excerpt(), 30, '...' ); ?>
+                                    <?php echo wp_trim_words( $text, 30, '...' ); ?>
                             </p>
                         </div>
                         <div>
@@ -202,7 +199,8 @@
             <?php endwhile; ?>
         </div>
     </section>
-    @endif
+    <?php endif; ?>
+
     <?php wp_reset_postdata(); ?>
 
-    @endsection
+@endsection
