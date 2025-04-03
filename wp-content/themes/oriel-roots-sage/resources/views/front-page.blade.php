@@ -59,8 +59,8 @@
     </section>
 
     <section class="full-width text-center text-white py-12 md:py-30 bg-khaki">
-        {!! get_svg('images.micro-shape', 'mx-auto') !!}
-        <h2 class="text-8xl-fluid ">We are <span x-data="textCycler()" x-ref="text"
+        {!! get_svg('images.micro-shape', 'mx-auto mb-6') !!}
+        <h2 class="text-6xl-fluid">We are <span x-data="textCycler()" x-ref="text"
                                                  data-words="Innovators, Results-oriented, Your Partners in Change"
                                                  class="block">
         Innovators
