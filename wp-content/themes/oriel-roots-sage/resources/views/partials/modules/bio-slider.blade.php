@@ -3,17 +3,21 @@
     $slides = [
       [
         'image_id' => 27,
-
         'story' => 'Oriel Insights has been an absolute game-changer for our high school’s decision-making process. The depth of analysis and clarity of insights from our end-of-year surveys have been incredibly valuable for providing us with a comprehensive understanding of our strengths and areas for growth. Working with Oriel Insights has given us the tools to proactively shape our future with confidence and to make the best changes to grow as an institution.',
+        'author_institution' => 'Private K-8 Institution',
+        'author_role' => 'Head of School',
       ],
       [
         'image_id' => 27,
-
         'story' => 'Oriel Insights has been an invaluable tool for our admissions office in understanding and addressing barriers to application completion. By surveying students who started but never completed their applications, we gained critical insights into the hesitations that prospective students face. The survey results helped us to streamline our application process and improve communication with prospective students. By working with Oriel Insights, we were able to strengthen our enrollment efforts and expand access to our institution.',
+        'author_institution' => 'Private K-8 Institution',
+        'author_role' => 'Head of School',
       ],
       [
         'image_id' => 27,
         'story' => 'Working with Oriel Insights for our school’s strategic planning was an incredibly smooth and rewarding experience. From the very beginning, their team provided expert guidance, ensuring that every step of the process was clear, efficient, and tailored to our institution’s unique needs. Oriel Insights not only helped us identify key areas for growth and improvement but also equipped us with a clear roadmap for success. Their professionalism, responsiveness, and expertise made for an outstanding experience, and I highly recommend them to any school looking to take a data-informed approach to strategic planning.',
+        'author_institution' => 'Private K-8 Institution',
+        'author_role' => 'Head of School',
       ],
     ];
 @endphp
@@ -23,7 +27,10 @@
         <div class="swiper story-swiper h-[750px] max-w-full">
             <div class="swiper-wrapper">
                 @foreach ($slides as $index => $slide)
-                    <div class="swiper-slide" data-story="{{ $slide['story'] }}">
+                    <div class="swiper-slide"
+                         data-story="{{ $slide['story'] }}"
+                         data-institution="{{ $slide['author_institution'] }}"
+                         data-role="{{ $slide['author_role'] }}">
                         {!! App\get_picture([$slide['image_id']], 'full', false, ['class' => 'h-full w-full object-cover object-center']) !!}
                     </div>
                 @endforeach
@@ -33,7 +40,8 @@
             <div class="breakout relative z-[2] grid grid-cols-1 items-center justify-center gap-6 lg:grid-cols-3">
                 <div class="lg:col-span-1 lg:col-start-1">
                     <h2 class="text-6xl-fluid text-white max-lg:mb-12 max-lg:text-center mb-6">
-                        What our customers have to say </h2>
+                        What our customers have to say
+                    </h2>
                     <div class="flex items-center gap-4 max-lg:flex-col max-lg:items-center max-lg:hidden">
                         <div class="flex gap-4">
                             <x-button-round :direction="'left'" classes="swiper-3-btn-prev text-white"></x-button-round>
@@ -58,18 +66,17 @@
                     </svg>
                 </div>
                 <div class="text-white lg:col-span-1 lg:col-start-3 lg:space-y-4 lg:max-xl:pl-6">
-                    <div class="mx-auto flex max-w-[400px] flex-col gap-6">
+                    <div class="mx-auto flex max-w-[400px] flex-col gap-6 text-container">
                         <p class="text-lg max-lg:mb-12 font-light" id="storyText">
                             {{ $slides[0]['story'] }}
                         </p>
-                        <ul role="list" class="divide-khaki divide-y text-xl max-lg:mb-24 ">
+                        <ul role="list" class="divide-khaki divide-y text-xl max-lg:mb-24">
                             <li class="py-4 flex items-center font-light">
                                 <svg class="text-khaki mr-2 inline-block h-5 w-5 align-baseline" viewBox="0 0 22 22"
                                      fill="currentColor" aria-hidden="true" data-slot="icon">
-                                    <path d="M20.75 18.4999V9.8748H21.125C21.2244 9.8748 21.32 9.83543 21.3903 9.76512C21.4606 9.6948 21.5 9.59918 21.5 9.4998V7.9998C21.5 7.90042 21.4606 7.8048 21.3903 7.73448C21.32 7.66416 21.2244 7.62479 21.125 7.62479H16.9999V20.7499H16.2499V6.87503H17.7499C17.8492 6.87503 17.9449 6.83566 18.0152 6.76534C18.0855 6.69503 18.1249 6.5994 18.1249 6.50002V5.00002C18.1249 4.90065 18.0855 4.80502 18.0152 4.7347C17.9449 4.66438 17.8493 4.62501 17.7499 4.62501H11.375V3.87501H14.7499C14.8492 3.87501 14.9449 3.83564 15.0152 3.76533C15.0855 3.69501 15.1249 3.59939 15.1249 3.50001V1.25001C15.1249 1.15063 15.0855 1.05501 15.0152 0.984687C14.9449 0.914367 14.8493 0.875 14.7499 0.875H11.375C11.375 0.667813 11.2072 0.5 11 0.5C10.7928 0.5 10.625 0.667813 10.625 0.875V4.625H4.25011C4.04293 4.625 3.87511 4.79281 3.87511 5V6.5C3.87511 6.59938 3.91449 6.695 3.9848 6.76532C4.05511 6.83564 4.15074 6.87501 4.25012 6.87501H5.75012V20.7499H5.00012V7.62477H0.875C0.667813 7.62477 0.5 7.79258 0.5 7.99977V9.49977C0.5 9.59914 0.539374 9.69477 0.609687 9.76509C0.68 9.83541 0.775626 9.87477 0.875007 9.87477H1.25001V20.7497H0.875007C0.66782 20.7497 0.500007 20.9175 0.500007 21.1247C0.500007 21.3318 0.66782 21.4997 0.875007 21.4997H21.125C21.3322 21.4997 21.5 21.3318 21.5 21.1247C21.5 20.9175 21.3322 20.7497 21.125 20.7497H20.75L20.75 18.4999ZM3.49999 16.6249H2.74999V15.1249H3.49999V16.6249ZM3.49999 12.8749H2.74999V11.3749H3.49999V12.8749ZM11 8.37492C11.9103 8.37492 12.7306 8.92337 13.0784 9.76431C13.4272 10.6043 13.2341 11.5728 12.591 12.2159C11.9478 12.859 10.9794 13.0522 10.1394 12.7034C9.29842 12.3556 8.74997 11.5353 8.74997 10.6249C8.74997 9.38276 9.7578 8.37492 11 8.37492ZM10.625 20.7498H9.12499V17.3749H10.625V20.7498ZM12.875 20.7498H11.375V17.3749H12.875V20.7498ZM14.75 16.6247H7.62487V15.4997H14.75V16.6247ZM19.25 16.6247H18.5V15.1247H19.25V16.6247ZM19.25 12.8747H18.5V11.3747H19.25V12.8747Z"
-                                          fill="currentColor"></path>
+                                    <path d="M20.75 18.4999V9.8748H21.125C21.2244 9.8748 21.32 9.83543 21.3903 9.76512C21.4606 9.6948 21.5 9.59918 21.5 9.4998V7.9998C21.5 7.90042 21.4606 7.8048 21.3903 7.73448C21.32 7.66416 21.2244 7.62479 21.125 7.62479H16.9999V20.7499H16.2499V6.87503H17.7499C17.8492 6.87503 17.9449 6.83566 18.0152 6.76534C18.0855 6.69503 18.1249 6.5994 18.1249 6.50002V5.00002C18.1249 4.90065 18.0855 4.80502 18.0152 4.7347C17.9449 4.66438 17.8493 4.62501 17.7499 4.62501H11.375V3.87501H14.7499C14.8492 3.87501 14.9449 3.83564 15.0152 3.76533C15.0855 3.69501 15.1249 3.59939 15.1249 3.50001V1.25001C15.1249 1.15063 15.0855 1.05501 15.0152 0.984687C14.9449 0.914367 14.8493 0.875 14.7499 0.875H11.375C11.375 0.667813 11.2072 0.5 11 0.5C10.7928 0.5 10.625 0.667813 10.625 0.875V4.625H4.25011C4.04293 4.625 3.87511 4.79281 3.87511 5V6.5C3.87511 6.59938 3.91449 6.695 3.9848 6.76532C4.05511 6.83564 4.15074 6.87501 4.25012 6.87501H5.75012V20.7499H5.00012V7.62477H0.875C0.667813 7.62477 0.5 7.79258 0.5 7.99977V9.49977C0.5 9.59914 0.539374 9.69477 0.609687 9.76509C0.68 9.83541 0.775626 9.87477 0.875007 9.87477H1.25001V20.7497H0.875007C0.66782 20.7497 0.500007 20.9175 0.500007 21.1247C0.500007 21.3318 0.66782 21.4997 0.875007 21.4997H21.125C21.3322 21.4997 21.5 21.3318 21.5 21.1247C21.5 20.9175 21.3322 20.7497 21.125 20.7497H20.75L20.75 18.4999ZM3.49999 16.6249H2.74999V15.1249H3.49999V16.6249ZM3.49999 12.8749H2.74999V11.3749H3.49999V12.8749ZM11 8.37492C11.9103 8.37492 12.7306 8.92337 13.0784 9.76431C13.4272 10.6043 13.2341 11.5728 12.591 12.2159C11.9478 12.859 10.9794 13.0522 10.1394 12.7034C9.29842 12.3556 8.74997 11.5353 8.74997 10.6249C8.74997 9.38276 9.7578 8.37492 11 8.37492Z"></path>
                                 </svg>
-                                Private K-8 Institution
+                                <span id="institutionText">{{ $slides[0]['author_institution'] }}</span>
                             </li>
                             <li class="py-4 flex items-center font-light">
                                 <svg class="text-khaki mr-2 inline-block h-5 w-5 align-baseline" width="25" height="24"
@@ -84,13 +91,12 @@
                                         </clipPath>
                                     </defs>
                                 </svg>
-                                Head of School
+                                <span id="roleText">{{ $slides[0]['author_role'] }}</span>
                             </li>
                         </ul>
                         <div class="flex items-center gap-4 max-lg:flex-col max-lg:items-center lg:hidden">
                             <div class="flex gap-4">
-                                <x-button-round :direction="'left'"
-                                                classes="swiper-3-btn-prev text-white"></x-button-round>
+                                <x-button-round :direction="'left'" classes="swiper-3-btn-prev text-white"></x-button-round>
                                 <x-button-round classes="swiper-3-btn-next text-white"></x-button-round>
                             </div>
                             <div class="relative inline-block w-[112px]">
