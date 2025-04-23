@@ -2,19 +2,19 @@
     // Example array for dynamic slides (replace with your actual data)
     $slides = [
       [
-        'image_id' => 27,
+        'image_id' => 51,
         'story' => 'Oriel Insights has been an absolute game-changer for our high school’s decision-making process. The depth of analysis and clarity of insights from our end-of-year surveys have been incredibly valuable for providing us with a comprehensive understanding of our strengths and areas for growth. Working with Oriel Insights has given us the tools to proactively shape our future with confidence and to make the best changes to grow as an institution.',
         'author_institution' => 'Private K-8 Institution',
         'author_role' => 'Head of School',
       ],
       [
-        'image_id' => 27,
+        'image_id' => 52,
         'story' => 'Oriel Insights has been an invaluable tool for our admissions office in understanding and addressing barriers to application completion. By surveying students who started but never completed their applications, we gained critical insights into the hesitations that prospective students face. The survey results helped us to streamline our application process and improve communication with prospective students. By working with Oriel Insights, we were able to strengthen our enrollment efforts and expand access to our institution.',
         'author_institution' => 'Private K-8 Institution',
         'author_role' => 'Head of School',
       ],
       [
-        'image_id' => 27,
+        'image_id' => 53,
         'story' => 'Working with Oriel Insights for our school’s strategic planning was an incredibly smooth and rewarding experience. From the very beginning, their team provided expert guidance, ensuring that every step of the process was clear, efficient, and tailored to our institution’s unique needs. Oriel Insights not only helped us identify key areas for growth and improvement but also equipped us with a clear roadmap for success. Their professionalism, responsiveness, and expertise made for an outstanding experience, and I highly recommend them to any school looking to take a data-informed approach to strategic planning.',
         'author_institution' => 'Private K-8 Institution',
         'author_role' => 'Head of School',
