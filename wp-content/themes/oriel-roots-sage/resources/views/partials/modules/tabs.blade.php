@@ -103,7 +103,7 @@
                         <div class="w-full px-4 md:w-1/2">
                             <div class="md:pr-16 lg:pr-24 text-lg md:text-xl">
                                 {!!
-  App\get_picture([19], 'full', false, [
+  App\get_picture([49], 'full', false, [
     'class' => 'rounded-xl w-full mb-8',
   ])
 !!}
