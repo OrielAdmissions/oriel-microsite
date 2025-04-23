@@ -8,7 +8,7 @@
     [
       'label' => 'Strategic Planning',
       'active' => false,
-      'accent_color' => '#79C9CC',
+      'accent_color' => '#BB9571',
     ],
   ],
 ])
