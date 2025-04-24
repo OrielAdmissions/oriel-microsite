@@ -9,7 +9,7 @@
                     {!! App\get_picture([get_post_thumbnail_id($page_id)], 'full', false, ['loading' => false, 'class' => 'w-full h-full  object-cover kenburns-top']) !!}
                 @endif
             </div>
-
+            <div class="relative bg-[black] opacity-50"></div>
             <div class="content-grid">
                 <div class="breakout relative flex flex-col items-center justify-center">
                     <h1 class="text-8xl-fluid text-center text-white fade-in-bottom">
