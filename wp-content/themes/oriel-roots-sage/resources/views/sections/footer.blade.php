@@ -27,8 +27,8 @@
       <div class="pb-6 lg:pb-37">
         <div class="flex flex-wrap pt-6 md:pt-13 lg:items-center">
           <div class="w-full md:w-2/3">
-            <h2 class="text-6xl-fluid mb-12 max-w-100 font-medium">
-              We are your experts in education.
+            <h2 class="text-6xl-fluid mb-12 font-medium">
+              Smarter Surveys. <br> Deeper Insights.
             </h2>
           </div>
         </div>
@@ -42,7 +42,7 @@
         <div class="flex flex-wrap items-center pt-6 pb-5 max-lg:gap-4">
           <div class="w-full max-lg:order-last lg:w-1/2">
             <p class="text-sm">
-              ©Oriel Admissions
+              ©Oriel Insights
 
               <?php
               echo date('Y'); ?>
